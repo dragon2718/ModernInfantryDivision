@@ -1,0 +1,114 @@
+USE PREVIOUS "units/units.txt"
+
+[UNIT] "INF"
+  Tech "U_INF"
+  Movie "Units/Images/Ground/Mid-Level/INF.midx"
+  AbstractMovie "Units/Images/Ground/Abstract/INF.midx"
+  Model "Units/Images/Ground/INF.fbx"
+  Icon "Units/Images/Icons/Ground/INF.png"    
+  IconIDX 54
+  IconIDX 10
+  DrawSize 11
+  AbstractDrawSize 30
+  FollowRadius 39//34
+  Size 0.8
+  Sound 138 Volume 0.2
+  Type Ground
+  Class "UC_Ground_Mobile"
+  AutoRepair 0.60
+  Speed 30
+  TurnSpeed 4 // in angles per second
+  Power 40
+  SelfDestructTime 40
+  //HangarMaxLoad 3
+  HangarSpaceRequired 1
+  ReportAsHosted Yes
+  OccupationRadius 75
+  AlwaysVisibleOnEnemyTerritory Yes
+  CanCrossBorderDuringPeaceTime No
+  
+  ////Same bonuses as army divisions
+  //Modifier "ECM_Bonus_1"
+  //Modifier "ECM_Bonus_2"
+  Modifier "ECM_Bonus_3"
+  Modifier "ECM_Bonus_4"
+  //ImprovedBy "Electronic_Counters_Mk1" Size 0.99
+  //ImprovedBy "Electronic_Counters_Mk2" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk3" Size 0.99
+  ImprovedBy "Electronic_Counters_Mk4" Size 0.99
+  
+    ProducedByAnotherUnit true
+    TargetInPlanner Yes
+	AttackerInPlanner
+  //CanCarryUnit "Fixed_LW_radar"
+  //CanCarryUnit "SAM_site"
+  //CanCarryUnit "Forward_Operating_Base"
+  //CanCarryUnit "Security_Checkpoint"
+  //CanCarryUnit "Improvised_Airbase"
+  //CanCarryUnit "SRBM_Site"
+  
+  ImprovedBy "Army_Mech_Mk2" Speed 1.3333
+  ImprovedBy "Army_Mech_Mk3" Speed 1.125
+  ImprovedBy "Army_Mech_Mk4" Speed 1.222
+  ImprovedBy "Army_Mech_Mk5" Speed 1.09
+  ImprovedBy "Army_Mech_Mk2" Power 1.05
+  ImprovedBy "Army_Mech_Mk3" Power 1.05
+  ImprovedBy "Army_Mech_Mk4" Power 1.05
+  ImprovedBy "Army_Mech_Mk5" Power 1.05
+ 
+  ImprovedBy "Improved_Basic_Protection" Power 1.15
+  ImprovedBy "Basic_Body_Armor" Power 1.15
+  ImprovedBy "Improved_Body_Armor" Power 1.15
+  ImprovedBy "Advanced_Body_Armor" Power 1.15
+  ImprovedBy "Experimental_Body_Armor" Power 1.15 
+
+  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
+  	Weapon "Body Armor" 1
+  	Weapon "Optics" 1
+	Weapon "MANPAD" 20000 Launch 1 Time 75 AutoEngage  DefaultOff //Mostly for show
+	Weapon "C-RAM" 25000 Launch 1 Time 5 AutoEngage LaunchPoint -1 DefaultOff
+  //Weapon "AA Gun Old" 20000 Launch 1 Time 12 AutoEngage DefaultOff
+  //Weapon "Light SAM" 20000 Launch 1 Time 90 AutoEngage DefaultOff
+  //Weapon "Point Defence SAM" 20000 Launch 1 Time 40 AutoEngage
+	Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
+	Weapon "Nuclear Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+	Weapon "Fusion Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+	Weapon "Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+	Weapon "Improved Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+	Weapon "Advanced Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+	Weapon "Experimental Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+/////CBRN stuff/////
+
+ Modifier "CBRN_Defence_0"
+ Modifier "CBRN_Defence_1"
+ Modifier "CBRN_Defence_2"
+ Modifier "CBRN_Defence_3"
+ Modifier "CBRN_Defence_4"
+
+ Modifier "Unit_BioChem_Modifier"
+	AffectedBy Explosion "Chemical_1" Speed 0.75
+	AffectedBy Explosion "Chemical_2" Speed 0.75
+	AffectedBy Explosion "Chemical_3" Speed 0.75
+	AffectedBy Explosion "Chemical_4" Speed 0.75
+	AffectedBy Explosion "Biological" Speed 0.75
+	AffectedBy Explosion "Biological2" Speed 0.75
+	AffectedBy Explosion "Biological3" Speed 0.75
+	AffectedBy Explosion "BiologicalX" Speed 0.75
+
+  //Weapon "SSM" 20000 AutoEngage
+  Radar "STD Vision"
+  ProductionCost 12
+  CanAccessGlobalStorage No  
+  Radar "Reconnaissance"
+  
+[UNIT] "Army_Base" MODIFY
+  Produces "INF"
+
+[UNIT] "Air_Transport" MODIFY
+  CanCarryUnit "INF"
+  
+[UNIT] "Landing_Ship" MODIFY
+  CanCarryUnit "INF"  
+  
+  
+[END]

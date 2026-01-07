@@ -1,0 +1,14 @@
+ICBM MOD "Modern Infantry Division"
+
+Version "1.1.2"
+
+Description "Add modern infantry division.
+
+Credit: https://steamcommunity.com/sharedfiles/filedetails/?id=3445756772"
+
+ChangeLog "- Initial version.
+- Clean up the tech code.
+- Rebalance and clean up the unit stats.
+- Refine the abstract image.
+- Add Artillery.
+- Enable 1 tech earlier."

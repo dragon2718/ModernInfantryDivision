@@ -1,0 +1,10 @@
+USE PREVIOUS "tech.txt"
+
+///UNITS///
+[TECHNOLOGY] "U_INF"
+ Name "U_INF_NAME"
+ Description "U_INF_DESC"
+
+[TECHNOLOGY] "Basic_Body_Armor" MODIFY
+ LeadsTo "U_INF"
+

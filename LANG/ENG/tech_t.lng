@@ -1,0 +1,11 @@
+USE PREVIOUS "lang/Eng/tech_t.lng"
+
+
+////////////////
+
+"U_INF_NAME" LANG "Infantry Division"
+"U_INF_DESC" LANG "An infantry division is a key military unit focused on ground combat, securing terrain, and engaging enemy forces through foot soldiers and supporting units. It works closely with artillery, armored, and air forces to conduct offensive and defensive operations. Composed of infantry, artillery, combat support, and logistics, it plays a vital role in both conventional warfare and peacekeeping missions.
++ Can occupy enemy cities.
+- Instantly visible when in enemy territory."
+
+END
