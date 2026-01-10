@@ -11,4 +11,5 @@ ChangeLog "- Initial version.
 - Rebalance and clean up the unit stats.
 - Refine the abstract image.
 - Add Artillery.
-- Enable 1 tech earlier."
+- Enable 1 tech earlier.
+- Refactor Unit code to reduce copy-pasting. Add a separate weapon config."
