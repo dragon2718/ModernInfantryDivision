@@ -8,39 +8,49 @@ USE PREVIOUS "units/units.txt"
   Icon "Units/Images/Icons/Ground/INF.png"    
   RoundIcon "Units/Images/Icons/Ground/INF.png"
   DrawSize 11
+
+  ReportAsHosted No
   HangarMaxLoad 0
-  OccupationRadius 75
-  AttackerInPlanner
-  
   delete CanCarryUnit "Fixed_LW_radar"
   delete CanCarryUnit "SAM_site"
   delete CanCarryUnit "Forward_Operating_Base"
   delete CanCarryUnit "Security_Checkpoint"
   delete CanCarryUnit "Improvised_Airbase"
   delete CanCarryUnit "SRBM_Site"
+  Slave
+  AutoReturn No
+  ProducedByAnotherUnit false
+  OccupationRadius 75
+  MaxAutoEngageRange 75
+  ProductionCost 6
   
   Config "Army Weapons"
   Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
-  	Weapon "Body Armor" 1
-  	Weapon "Optics" 1
-	Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
-	Weapon "Nuclear Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
-	Weapon "Fusion Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
-	Weapon "Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-	Weapon "Improved Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-	Weapon "Advanced Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-	Weapon "Experimental Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Body Armor" 1
+  Weapon "Optics" 1
+  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
+  Weapon "Nuclear Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+  Weapon "Fusion Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
+  Weapon "Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Improved Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Advanced Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
+  Weapon "Experimental Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
 
   Radar "Reconnaissance"
   
-[UNIT] "Army_Base" MODIFY
-  Produces "INF"
-
-[UNIT] "Air_Transport" MODIFY
-  CanCarryUnit "INF"
+[UNIT] "Army_Division" MODIFY
+  ReportAsHosted Yes
+  HangarMaxLoad 1
+  Airway Launch 1 Time 30 // in seconds in 1x time
+  CanHostAircraft "INF" 1
+  CanAccessUnitStockpile No
   
-[UNIT] "Landing_Ship" MODIFY
-  CanCarryUnit "INF"  
+[UNIT] "Army_Entrenched" MODIFY
+  ReportAsHosted Yes
+  HangarMaxLoad 1
+  Airway Launch 1 Time 30 // in seconds in 1x time
+  CanHostAircraft "INF" 1
+  CanAccessUnitStockpile No
   
   
 [END]
