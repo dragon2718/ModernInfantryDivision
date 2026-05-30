@@ -1,6 +1,6 @@
 ICBM MOD "Modern Infantry Division"
 
-Version "1.1.2"
+Version "1.2.0"
 
 Description "Add modern infantry division.
 
@@ -12,4 +12,5 @@ ChangeLog "- Initial version.
 - Refine the abstract image.
 - Add Artillery.
 - Enable 1 tech earlier.
-- Refactor Unit code to reduce copy-pasting. Add a separate weapon config."
+- Refactor Unit code to reduce copy-pasting. Add a separate weapon config.
+- Update icons. Change to a sub-unit of Army Division."
