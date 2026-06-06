@@ -21,21 +21,8 @@ USE PREVIOUS "units/units.txt"
   AutoReturn No
   ProducedByAnotherUnit false
   OccupationRadius 75
-  MaxAutoEngageRange 75
+  MaxAutoEngageRange 300
   ProductionCost 6
-  
-  Config "Army Weapons"
-  Weapon "Small Arms" 20000 Launch 1 Time 10 AutoEngage DefaultOff
-  Weapon "Body Armor" 1
-  Weapon "Optics" 1
-  Weapon "Massacre Civilians" 20000 Launch 1 Time 100 LaunchPoint -1
-  Weapon "Nuclear Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
-  Weapon "Fusion Artillery" 20000 Launch 1 Time 150 AutoEngage WhenAttacked ByNuke
-  Weapon "Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-  Weapon "Improved Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-  Weapon "Advanced Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-  Weapon "Experimental Chemical Artillery" 20000 Launch 1 Time 100 AutoEngage
-
   Radar "Reconnaissance"
   
 [UNIT] "Army_Division" MODIFY
