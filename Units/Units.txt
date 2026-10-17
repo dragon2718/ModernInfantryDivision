@@ -39,5 +39,11 @@ USE PREVIOUS "units/units.txt"
   CanHostAircraft "INF" 1
   CanAccessUnitStockpile No
   
+[UNIT] "Army_Mobile_Mode" MODIFY
+  ReportAsHosted Yes
+  HangarMaxLoad 1
+  Airway Launch 1 Time 30 // in seconds in 1x time
+  CanHostAircraft "INF" 1
+  CanAccessUnitStockpile No
   
 [END]
